@@ -231,12 +231,14 @@
 }
 
 /* Project Container */
+/* Project Container - Stacked Layout */
 .projects-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  flex-direction: column; /* Ensures vertical stacking */
+  align-items: center; /* Centers the cards */
+  gap: 20px; /* Space between cards */
 }
+
 
 /* Project Cards */
 .project-card {

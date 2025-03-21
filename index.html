@@ -223,6 +223,69 @@
       margin-bottom: 5px; 
     }
 
+    /* Project Section */
+.projects {
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+/* Project Container */
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Project Cards */
+.project-card {
+  width: 300px;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  position: relative;
+}
+
+.project-card h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Expandable Details */
+.project-details {
+  display: none;
+  margin-top: 10px;
+  text-align: left;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Card Hover Effect */
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Expanded Card Style */
+.project-card.expanded {
+  width: 350px;
+  background: #f1f1f1;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+  transition: 0.3s ease-in-out;
+}
+
+.project-card.expanded .project-details {
+  display: block;
+}
+
+
   
     @media (max-width: 768px) {
       .container {
@@ -264,35 +327,85 @@
     <section class="skills">
       <h2>Skills</h2>
       <ul>
-        <li>Programming Languages: Java, C++, Python, C</li>
+        <li>Programming Languages: C++, Python, C</li>
         <li>Web Development: HTML, CSS, JavaScript</li>
-        <li>Database Management: SQL</li>
+        <li>Database Management: SQL, MongoDB</li>
         <li>Tools and Technologies: Git, GitHub, VS Code</li>
       </ul>
     </section>
 
     <section class="projects">
-      <h2>Projects</h2>
-      <ul>
-        <li><span class="project-title">To-Do List Application</span>  
-          <br>A simple Java Swing application for task management.  
-          <br>Key Concepts: Java, Swing, AWT
+  <h2>Projects</h2>
+  <div class="projects-container">
+    <div class="project-card" onclick="toggleDetails(this)">
+      <h3>Medicine Identification Application</h3>
+      <div class="project-details">
+        <p><strong>Problem:</strong> Elderly people face challenges in identifying medicines due to poor vision, memory issues, or complex packaging.</p>
+        <p>Developed a user-friendly application leveraging image recognition technology to identify medicines and provide both visual and audio outputs for enhanced accessibility.</p>
+        <p>Designed and implemented the front-end interface ensuring smooth user interaction with features like medicine scanning and real-time feedback on medicine information.</p>
+        <p><strong>Future Work:</strong> Integrate the application with a smartbox for seamless automation.</p>
+      </div>
+    </div>
 
-        </li>
-        <li><span class="project-title">Basic Chat Application</span>  
-          <br>A basic chat application developed in Java using socket programming for real-time communication between clients.
-          <br>Key Concepts: Java, Swing, Networking (Sockets), Multithreading
-        </li>
-      </ul>
-    </section>
+    <div class="project-card" onclick="toggleDetails(this)">
+      <h3>Restaurant Discovery Platform</h3>
+      <div class="project-details">
+        <p>Developed a restaurant discovery platform enabling users to search restaurants by location and food images.</p>
+        <p>Integrated a database to store restaurant data and implemented optimized queries for faster retrieval.</p>
+        <p>Built a RESTful API service with endpoints for restaurant details, paginated listings, and searches (location & image-based).</p>
+        <p>Designed an interactive web interface with a restaurant list page and detailed restaurant view.</p>
+        <p>Deployed the application to a live server for public access.</p>
+      </div>
+    </div>
+
+    <div class="project-card" onclick="toggleDetails(this)">
+      <h3>Book Search & Recommendation System</h3>
+      <div class="project-details">
+        <p>Developed a smart book search application that helps users find books even if they don’t remember the title.</p>
+        <p>Utilized <strong>Gemini API</strong> to extract keywords from user descriptions and retrieve relevant books via <strong>Google Books API</strong>.</p>
+        <p>Implemented <strong>voice search</strong>, <strong>real-time book previews</strong>, and a <strong>favorites list</strong> for an enhanced user experience.</p>
+        <p>Built a <strong>Flask-based API backend</strong> to process search queries and return relevant book recommendations.</p>
+        <p><strong>Key Technologies:</strong> Flask, Google Books API, Gemini API, JavaScript, Speech Recognition</p>
+      </div>
+    </div>
+
+    <div class="project-card" onclick="toggleDetails(this)">
+      <h3>AI Speech Command System</h3>
+      <div class="project-details">
+        <p>Developed a voice-activated system that executes commands such as opening applications, searching Google, controlling volume, and managing files.</p>
+        <p>Integrated speech recognition, automation, and GUI elements for an interactive user experience.</p>
+        <p><strong>Key Technologies:</strong> Python, Speech Recognition, Tkinter, OS Automation, Multithreading</p>
+      </div>
+    </div>
+
+    <div class="project-card" onclick="toggleDetails(this)">
+      <h3>To-Do List Application</h3>
+      <div class="project-details">
+        <p>A simple Java Swing application for task management.</p>
+        <p><strong>Key Technologies:</strong> Java, Swing, AWT</p>
+      </div>
+    </div>
+
+    <div class="project-card" onclick="toggleDetails(this)">
+      <h3>Basic Chat Application</h3>
+      <div class="project-details">
+        <p>A basic chat application developed in Java using socket programming for real-time communication between clients.</p>
+        <p><strong>Key Technologies:</strong> Java, Swing, Networking (Sockets), Multithreading</p>
+      </div>
+    </div>
+  </div>
+</section>
 
     <section class="interests">
       <h2>Interests and Hobbies</h2>
       <ul>
         <li>Machine Learning & AI</li>
         <li>Web Development</li>
-        <li>Data analytics</li>
-        <li>Problem Solving (LeetCode, HackerRank)</li>
+        <li>Problem Solving 
+          (<a href="https://leetcode.com/u/pallavimukalla/" target="_blank">LeetCode</a>, 
+          <a href="https://www.codechef.com/users/pallavimukalla" target="_blank">CodeChef</a>)
+        </li>
+
       </ul>
     </section>
 
@@ -301,6 +414,7 @@
       <ul>
         <li>Participated in various coding events and hackathons.</li>
         <li>Member of IEEE Club</li>
+        <li>Paticipated in various spots events</li>
       </ul>
     </section>
 
@@ -324,4 +438,10 @@
 
 
 </body>
+  <script>
+      function toggleDetails(card) {
+    card.classList.toggle("expanded");
+  }
+
+  </script>
 </html>

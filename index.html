@@ -294,6 +294,57 @@
         width: 90%;
       }
     }
+
+
+    @media (max-width: 480px) {
+  body {
+    font-size: 14px;  /* Decrease font size for readability on mobile */
+  }
+
+  h1, h2 {
+    font-size: 1.2em;  /* Smaller header sizes for mobile */
+  }
+
+  .container {
+    width: 95%;
+    padding: 10px;  /* Reduced padding for smaller screens */
+  }
+
+  .intro {
+    padding: 20px;  /* Less padding for the intro section */
+  }
+
+  .skills, .projects, .interests, .activities, .education {
+    padding: 15px;  /* Reduced padding for mobile */
+  }
+
+  .contact a {
+    font-size: 1em;  /* Smaller font size for links */
+    padding: 8px 15px;  /* Smaller button padding */
+  }
+
+  .project-card {
+    width: 100%;  /* Full width for project cards */
+    margin-bottom: 15px;  /* More space between cards */
+    padding: 10px;  /* Reduced padding */
+  }
+
+  footer {
+    font-size: 1em;  /* Adjust footer text size */
+  }
+
+  /* Stack project cards and sections vertically */
+  .project-card {
+    width: 100%;
+  }
+
+  /* Ensure buttons take full width on smaller screens */
+  .contact a {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+  }
+}
   </style>
 </head>
 <body>
